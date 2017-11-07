@@ -323,6 +323,7 @@ TrajectorySampler::TrajectorySampler(ros::NodeHandle nh)
     visual_tools.publishText(text_pose, "Grasping target object",
                              rviz_visual_tools::WHITE, rviz_visual_tools::XXXXLARGE);
     visual_tools.trigger();
+    ros::Duration(2.0).sleep();
     CloseGripper();
     visual_tools.prompt("next step");
 
